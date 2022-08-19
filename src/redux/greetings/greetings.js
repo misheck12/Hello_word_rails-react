@@ -1,31 +1,30 @@
-import Axios from 'axios';
+const defaultState = ['Love'];
+const BASE_URL = 'http://127.0.0.1:3000';
+const GREETING_ENDPOINT = 'v1/greeting';
+const GET_GREETING_REQUEST = 'GET_THINGS_REQUEST';
 
-// conts
-const FETCH_GREETING = 'hello-rails-react/greetings/FETCH_GREETING';
-
-// actions
-const fetchGreeting = (payload) => ({
-  type: FETCH_GREETING,
-  payload,
-});
-
-// state
-const initialState = [];
-
-export const fetchGreetingApi = () => async (dispatch) => {
-  const returnValue = await Axios.get('http://localhost:3000/v1/greetings');
-  const greeting = returnValue.data.data.greeting.message;
-  dispatch(fetchGreeting(greeting));
-};
-
-// reducer
-const reducer = (state = initialState, action) => {
+export default function greetingReducer(state = defaultState, action) {
   switch (action.type) {
-    case FETCH_GREETING:
-      return action.payload;
+    case GET_GREETING_REQUEST:
+      return action.payload.message;
     default:
       return state;
   }
-};
+}
 
-export default reducer;
+export function setGreeting(message) {
+  return {
+    type: GET_GREETING_REQUEST,
+    payload: message,
+  };
+}
+
+export const getGreeting = () => async (dispatch) => {
+  const message = await fetch(`${BASE_URL}/${GREETING_ENDPOINT}`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  }).then((response) => response.json());
+  dispatch(setGreeting(message));
+};
