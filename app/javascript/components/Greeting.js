@@ -22,7 +22,7 @@ const Greeting = () =>  {
       </React.Fragment>
     );
   
-}
+}   
 
 export default Greeting
 
