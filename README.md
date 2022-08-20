@@ -42,11 +42,11 @@ rails s
 
 ## Author
 
-👤 **Cédric Kossi**
+👤 **Misheck livingi**
 
-- GitHub: [@kosher9](https://github.com/kosher9)
-- Twitter: [@kosherus](https://twitter.com/kosherus)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/lionel-c%C3%A9dric-kossi-323042172)
+- GitHub: [@misheck12](https://github.com/misheck12)
+- Twitter: [@mishecklivingi2](https://twitter.com/mishecklivingi2)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/mishecklivingi)
 
 ## 🤝 Contributing
 
