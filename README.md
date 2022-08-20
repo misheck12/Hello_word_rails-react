@@ -1,79 +1,63 @@
-![](https://img.shields.io/badge/Misheck12-blueviolet)
-
-# Hello React Front End app
-
-> Hello React Front End app is simple application that contains setup of react application. The greeting page loads a random greeting from API on every page load.
-
-## Link to the back end
-
-[Hello Rails back end](https://github.com/misheck12/hello_world_rails-react)
+# Hello-Rails
+This is a simple project just to learn how to combine Rails and react in one repository.
+Check it for more. :)
 
 ## Built With
 
-- HTML
-- CSS
-- JavaScript
-- REACT
+- Ruby on Rails
+- PostgreSQL
+- React
 - Redux
-- Webpack
 
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
-- A text editor(preferably Visual Studio Code)
-- Node
-- Web browser
 
-### Install
-- [Git](https://git-scm.com/downloads)
-- [Node](https://nodejs.org/en/download/)
+- [Ruby](https://www.ruby-lang.org/en/)
+- [Rails](https://gorails.com/)
 
-### Using it Locally
+### Setup
 
-- Clone the project
+- Make sure you have Ruby on Rails set up properly on your computer
+- Clone or download this repo on your machine
+- Enter project directory
+
+### Development Database
 
 ```sh
-git clone https://github.com/misheck12/hello_world_rails-react
-
-cd hello-react-front-end
-```
-
-- Install dependencies
-
-```
-npm i 
-or
+# Install dependencies
+bundle install
 npm install
+# Create user
+sudo -u postgres createuser -e ced00 -s
+# Create the database
+rake db:create
+# Run database Migration
+rails db:migrate
+# Run the server
+rails s
 ```
 
-- To Start the development server
-```
-npm start
-```
 ## Author
 
-👤 **Misheck livingi**
+👤 **Cédric Kossi**
 
-- GitHub: [@githubhandle](https://github.com/misheck12)
-- Twitter: [@twitterhandle](https://twitter.com/Mishecklivingi12)
-
+- GitHub: [@kosher9](https://github.com/kosher9)
+- Twitter: [@kosherus](https://twitter.com/kosherus)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/lionel-c%C3%A9dric-kossi-323042172)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/misheck12/hello_world_rails-react/issues).
+Feel free to check the [issues page](../../issues/).
 
 ## Show your support
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
-
-- Inspiration: Microverse
-
 ## 📝 License
 
-This project is [MIT](./LICENSE.md) licensed.
+This project is [MIT](./MIT.md) licensed.
